@@ -1,6 +1,14 @@
 # goarg
 
-Simple command line argument parser.
+[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/suzuki-shunsuke/goarg)
+[![CircleCI](https://circleci.com/gh/suzuki-shunsuke/goarg.svg?style=svg)](https://circleci.com/gh/suzuki-shunsuke/goarg)
+[![codecov](https://codecov.io/gh/suzuki-shunsuke/goarg/branch/master/graph/badge.svg)](https://codecov.io/gh/suzuki-shunsuke/goarg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/suzuki-shunsuke/goarg)](https://goreportcard.com/report/github.com/suzuki-shunsuke/goarg)
+[![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/goarg.svg)](https://github.com/suzuki-shunsuke/goarg)
+[![GitHub tag](https://img.shields.io/github/tag/suzuki-shunsuke/goarg.svg)](https://github.com/suzuki-shunsuke/goarg/releases)
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/goarg/master/LICENSE)
+
+Golang's simple command line argument parser.
 
 ## Motivation
 
