@@ -9,16 +9,16 @@ import (
 
 func Example() {
 	parser := goarg.NewParser()
-	b, err := parser.
-		Add(func(args ...string) error {
+	_, b, err := parser.
+		Add(func(args ...string) (interface{}, error) {
 			fmt.Println(args)
 			fmt.Println("git status")
-			return nil
+			return nil, nil
 		}, "git", "status").
-		Add(func(args ...string) error {
+		Add(func(args ...string) (interface{}, error) {
 			fmt.Println(args)
 			fmt.Println("git add")
-			return nil
+			return nil, nil
 		}, "git", "add").
 		Parse("git", "add", "foo.txt")
 	if !b {
