@@ -13,7 +13,7 @@ type (
 	}
 
 	// Command represents a command.
-	Command func(args ...string) error
+	Command func(args ...string) (interface{}, error)
 )
 
 // NewHandler returns a handler.
@@ -51,14 +51,15 @@ func (parser *Parser) Add(cmd Command, args ...string) *Parser {
 }
 
 // Parse parses arguments and run the command of matched handler.
-func (parser *Parser) Parse(args ...string) (bool, error) {
+func (parser *Parser) Parse(args ...string) (interface{}, bool, error) {
 	if parser == nil {
-		return false, nil
+		return nil, false, nil
 	}
 	for _, handler := range parser.handlers {
 		if arr, f := handler.Match(args...); f {
-			return true, handler.cmd(arr...)
+			a, err := handler.cmd(arr...)
+			return a, true, err
 		}
 	}
-	return false, nil
+	return nil, false, nil
 }
